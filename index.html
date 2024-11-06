@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Google Sheet.css">
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <form method="post"
+            action="https://script.google.com/macros/s/AKfycbxoVC9V1kMxmkbrEA5vBE0Hy5htcfxLiLcm-fMlTGEB8W-pq1xfU7GEWMIK9cV3mLpTPQ/exec"
+            id="contactForm" name="contact-form">
+            <h4>Contact Us</h4>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="number" placeholder="Number">
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="7" placeholder="Message" required></textarea>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+
+    <script src="Google Sheet.js">
+        /*
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbydXm89fkT20N85Eyo0DhkT68jDcQSNtx7Q8HUBrV-1VR-wAfOWdGIi1iX_2o7_WA49Kw/exec'; // Replace with your Apps Script URL
+
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(scriptURL, {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: { 'Content-Type': 'application/json' }
+                });
+
+                const result = await response.json();
+                alert(result.message); // Alert confirmation on successful save
+                e.target.reset(); // Clear form after submission
+            } catch (error) {
+                console.error('Error!', error.message);
+            }
+        });
+        
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbydXm89fkT20N85Eyo0DhkT68jDcQSNtx7Q8HUBrV-1VR-wAfOWdGIi1iX_2o7_WA49Kw/exec'; // Replace with your Apps Script URL
+        const form = document.forms['contactForm'];  // Replace 'contact-form' with your form's name or ID
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+                .then(response => response.json())
+                .then(data => console.log('Success:', data))
+                .catch(error => console.error('Error:', error));
+        });
+*/
+
+
+    </script>
+</body>
+
+</html>
